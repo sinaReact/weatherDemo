@@ -19,14 +19,12 @@ const SearchBox = (props) => {
   const locationNotFound = useSelector(
     (state) => state.UISlice.modal.locationNotFound
   );
-  console.log(111111, locationNotFound);
   useEffect(() => {
     const autocomplete = places({
       container: inputRef.current,
     });
 
     autocomplete.on("change", (event) => {
-      console.log("zzzzzzzz", event.suggestion);
       setValue(event.suggestion.value);
       setLocation(event.suggestion);
     });

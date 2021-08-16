@@ -17,7 +17,6 @@ const WeatherListItem = (props) => {
 
   /// helpers
   const removeLocationHandler = () => {
-    console.log(222, locationName);
     dispatch(removeLocation(locationName));
   };
 

@@ -33,7 +33,4 @@ const App = () => {
 
 export default App;
 
-/// 1 handle axios errors - under construction
-//// 2 add togel for F'  and C'
-//// need help
-//// yeap, I'm responsive!! :D
+
