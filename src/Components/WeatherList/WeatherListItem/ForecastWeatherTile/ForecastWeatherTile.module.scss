@@ -1,0 +1,24 @@
+.forecastContaienr {
+  display: flex;
+  overflow-x: auto;
+  .futureDay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    min-width: 100px;   
+    .dayAndNightTemp {   
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .forecastIcon {
+      width: 4rem;
+    }
+    .dayTemp {
+      margin-right: 5px;
+      font-weight: bold;
+    }
+  }
+}

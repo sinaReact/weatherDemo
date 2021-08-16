@@ -1,0 +1,29 @@
+.listContainer {
+  margin-top: 2rem;
+  min-width: 40%;
+  max-width: 90%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto; 
+   @media (max-width:360px){
+    height: 60vh;
+   }
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgb(110, 228, 246);
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgb(235, 156, 134);
+}

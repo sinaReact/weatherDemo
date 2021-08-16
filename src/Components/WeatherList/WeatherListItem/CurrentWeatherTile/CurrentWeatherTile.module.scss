@@ -1,0 +1,23 @@
+.currentContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .name {
+    margin-right: 20px;    
+    font-weight: bold;
+    font-size: 20px;
+    @media (max-width: 411px){
+      font-size: 15px;
+      margin-left: 20px;
+    }
+  }
+  .tempAndIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .temp {
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+}

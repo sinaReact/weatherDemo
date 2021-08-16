@@ -1,0 +1,11 @@
+.buttonContainer {
+  min-width: 2rem;
+  min-height: 40px;
+  border-radius: 10px;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 20px;
+  &:hover {
+    opacity: 0.5;
+  }
+}

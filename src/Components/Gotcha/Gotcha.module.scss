@@ -1,0 +1,32 @@
+.modalContainer {
+  box-sizing: border-box;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 2px dotted rgb(204, 204, 204);
+  background-color: rgba(255, 150, 151, 0.8);
+  box-sizing: border-box;
+  .text {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: "Indie Flower", cursive;
+  }
+  .closeButton {  
+    font-family: "Indie Flower", cursive;
+  }
+  @media (max-width: 411px) {
+    .text {
+      font-weight: bold;
+      font-size: 15px;
+      font-family: "Indie Flower", cursive;
+    }
+    .closeButton {
+      font-size: 15px;
+      font-family: "Indie Flower", cursive;
+    }
+  }
+}
