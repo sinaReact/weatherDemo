@@ -6,8 +6,8 @@ import CloudLoading from "../UI/CloudLoading/CloudLoading";
 
 const WeatherList = () => {
   //// hooks
-  const weatherData = useSelector((state) => state.weatherSlice);
-  const isLoading = useSelector((state) => state.UISlice.isWeatherDataLoading);
+  const weatherData = useSelector((state) => state.weatherSlice.data);
+  const isLoading = useSelector((state) => state.weatherSlice.isDataFetching);
 
   /// return
   return (

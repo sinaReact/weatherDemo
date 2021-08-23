@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import styles from "./SearchBox.module.scss";
 import { getWeatherData } from "../../store/weatherSlice";
-import { setLocationNotFound } from "../../store/UISlice";
+import { getWeatherData_error } from "../../store/weatherSlice";
 import SearchWeatherButton from "../UI/SearchWeatherButton/SearchWeatherButton";
 import LocationNotFoundModal from "../LocationNotFoundModal/LocationNotFoundModal";
 
@@ -17,7 +17,7 @@ const SearchBox = (props) => {
   const [value, setValue] = useState("");
   const [location, setLocation] = useState(null);
   const locationNotFound = useSelector(
-    (state) => state.UISlice.modal.locationNotFound
+    (state) => state.weatherSlice.error
   );
   useEffect(() => {
     const autocomplete = places({
@@ -35,12 +35,12 @@ const SearchBox = (props) => {
     setValue(event.target.value);
   };
 
-  const searchHandler = (event) => {
+  const searchSubmitHandler = (event) => {
     event.preventDefault();
     if (location) {
       dispatch(getWeatherData(location));
     } else {
-      dispatch(setLocationNotFound(true));
+      dispatch(getWeatherData_error(true));
     }
     setValue("");
     setLocation(null);
@@ -52,7 +52,7 @@ const SearchBox = (props) => {
       {locationNotFound && <LocationNotFoundModal />}
       <form
         className={`${styles.searchBoxContainer} ${className}`}
-        onSubmit={searchHandler}
+        onSubmit={searchSubmitHandler}
       >
         <input
           onBlur={() => (inputRef.current.value = "")}

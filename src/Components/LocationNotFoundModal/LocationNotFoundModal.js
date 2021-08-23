@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import styles from "./LocationNotFoundModal.module.scss";
 import Modal from "../UI/Modal/Modal";
 import TransparentButton from "../UI/TransparentButton/TransparentButton";
-import { setLocationNotFound } from "../../store/UISlice";
+import { getWeatherData_error } from "../../store/weatherSlice";
 
 const LocationNotFound = () => {
   //// hooks
@@ -11,18 +11,18 @@ const LocationNotFound = () => {
 
   /// helpers
   const handleCloseButton = () => {
-    dispatch(setLocationNotFound(false));
+    dispatch(getWeatherData_error(null));
   };
   /// return
   return (
     <Modal>
       <div className={styles.modalContainer}>
         <p className={styles.text}>
-          Ooops!!
-          Sorry but we couldn't find the location, please try to use the auto-complete 🧐
+          Ooops!! Sorry but we couldn't find the location, please try to use the
+          auto-complete 🧐
         </p>
         <TransparentButton
-          color='black'
+          color="black"
           onClick={handleCloseButton}
           className={styles.closeButton}
         >
